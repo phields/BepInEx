@@ -11,7 +11,6 @@ jobs:
     steps:
       - name: Check BE status
         id: be_status
-        if: ${{ github.repository_owner == 'BepInEx' }} # Only generate BE builds on main repo, forks should only get artifacts
         run: |
           echo "Generating Bleeding Edge build!"
           echo "::set-output name=is_be::true"
